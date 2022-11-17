@@ -5,7 +5,7 @@ This project (based on [CrowdDet](https://github.com/Purkialo/CrowdDet)) is the 
 
 ## Introduction
 
-Our motivation is to detect the body and face of pedestrians in a joint manner, which is important in many industrial applications. The core ideas of our approach is mainly two-fold: 1). From appearance level, learning associative embeddings. 2). From geometry level, using adjuct head center as hooks ("head hook"). We utilize information from these two sources to match bodies and faces online inside the detector.
+Our motivation is to detect the body and face of pedestrians in a joint manner, which is important in many industrial applications. The core ideas of our approach are mainly two-fold: 1). From appearance level, learning associative embeddings. 2). From geometry level, using adjuct head center as hooks ("head hook"). We utilize information from these two sources to match bodies and faces online inside the detector.
 
 ![introfig](./demo/intro.png)
 ![introfig1](./demo/intro1.png)
@@ -40,8 +40,8 @@ Please follow instructions below to get these data.
 
 ## New metric: *Miss Matching Rate*
 
-We propose a new metric: miss matching rate ($mMR^{-2}$) to estimate quality of body-face association. \
-* On CrowdHuman, the evaluation code can be found [here](./lib/evaluate/compute_MMR.py), in which the related functions will be called when you run the test.py script. \
+We propose a new metric: miss matching rate ($mMR^{-2}$) to estimate quality of body-face association.
+* On CrowdHuman, the evaluation code can be found [here](./lib/evaluate/compute_MMR.py), in which the related functions will be called when you run the test.py script.
 * On CityPersons, since there are quite different evaluation settings from those in CrowdHuman, we organize the evaluation scripts [here](./eval_cp).
 
 
