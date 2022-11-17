@@ -38,11 +38,11 @@ Please follow instructions below to get these data.
 2. Download annotations from [GoogleDrive](https://drive.google.com/drive/folders/1PxGTo_SE8O56r0qw7DgmR3Lk-eokS0X0), which contains the original body boxes and our newly annotated head/face boxes.
 
 
-## New metric: *Miss Matching Rate* ($mMR^{-2}$)
+## New metric: *Miss Matching Rate*
 
-We propose a new metric: miss matching rate (mMR) to estimate quality of body-face association. \
-On CrowdHuman, the evaluation code can be found [here](./lib/evaluate/compute_MMR.py), in which the related functions will be called when you run the test.py script. \
-On CityPersons, since there are quite different evaluation settings from those in CrowdHuman, we organize the evaluation scripts [here](./eval_cp).
+We propose a new metric: miss matching rate ($mMR^{-2}$) to estimate quality of body-face association. \
+* On CrowdHuman, the evaluation code can be found [here](./lib/evaluate/compute_MMR.py), in which the related functions will be called when you run the test.py script. \
+* On CityPersons, since there are quite different evaluation settings from those in CrowdHuman, we organize the evaluation scripts [here](./eval_cp).
 
 
 ## Quick & Easy Start
