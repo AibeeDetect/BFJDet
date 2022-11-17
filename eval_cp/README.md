@@ -8,7 +8,7 @@ Evaluation Tools for CityPersons
 ### Results Preparing
 1. If you want to evaluate $MR^{-2}$ for body/face, dump your results to a standard COCO-format JSON file in which the "body" and "face" are two categories in parallel. You can refer to bbox.json in [demo-results](https://drive.google.com/drive/folders/1ojzw7k729qQ-qf1N_Ngc5T91iAPS75i5) for more details.
 2. If you want to evaluate $mMR^{-2}$, dump your results following format below:
-```json
+```shell
 [
 ...
 {"image_id": 497, 
