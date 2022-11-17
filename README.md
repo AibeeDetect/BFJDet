@@ -5,17 +5,10 @@ This project (based on [CrowdDet](https://github.com/Purkialo/CrowdDet)) is the 
 
 ## Introduction
 
-Our motivation is to detect the body and face of pedestrians in a joint manner, which is important in many industrial applications. The core ideas of our approach is mainly in two fold: 1). From appearance level, learning associative embeddings. 2). From geometry level, using adjuct head center as hooks ("head hook"). We utilize information from these two sources to match bodies and faces online inside the detector.
+Our motivation is to detect the body and face of pedestrians in a joint manner, which is important in many industrial applications. The core ideas of our approach is mainly two-fold: 1). From appearance level, learning associative embeddings. 2). From geometry level, using adjuct head center as hooks ("head hook"). We utilize information from these two sources to match bodies and faces online inside the detector.
 
 ![introfig](./demo/intro.png)
 ![introfig1](./demo/intro1.png)
-
-## Updates
-
-- [x] Faster R-CNN + BFJ on CrowdHuman.
-- [ ] Faster R-CNN + BFJ on CityPersons.
-- [ ] RetinaNet + BFJ on CrowdHuman.
-- [ ] RetinaNet + BFJ on CityPersons.
 
 ## Citations
 
@@ -41,13 +34,15 @@ Please follow instructions below to get these data.
 2. Download annotations from [GoogleDrive](https://drive.google.com/drive/folders/1Sk2IAmm_wTVh289RKs5FiU17siWrJJCu?usp=sharing), which contains the original body/head boxes and our newly annotated face boxes.
 
 ### 2. CityPersons
-Will be released soon.
+1. Download images from https://www.cityscapes-dataset.com/.
+2. Download annotations from [GoogleDrive](https://drive.google.com/drive/folders/1PxGTo_SE8O56r0qw7DgmR3Lk-eokS0X0), which contains the original body boxes and our newly annotated head/face boxes.
 
 
-## New metric: *Miss Matching Rate (mMR)*
+## New metric: *Miss Matching Rate*
 
-We propose a new metric: miss matching rate (mMR) to estimate quality of body-face association.
-The evaluation code can be found [here](./lib/evaluate/compute_MMR.py), in which the related functions will be called when you run the test.py script.
+We propose a new metric: miss matching rate ($mMR^{-2}$) to estimate quality of body-face association. \
+* On CrowdHuman, the evaluation code can be found [here](./lib/evaluate/compute_MMR.py), in which the related functions will be called when you run the test.py script. \
+* On CityPersons, since there are quite different evaluation settings from those in CrowdHuman, we organize the evaluation scripts [here](./eval_cp).
 
 
 ## Quick & Easy Start
@@ -90,6 +85,6 @@ All models are based on ResNet-50 FPN.
 | FRCN-FPN-POS (Baseline)  | 87.9/71.1 | 43.7/52.6 | 66.4 | [GoogleDrive](https://drive.google.com/file/d/1GFnIXqc9aG0eXSQFI4Pe4XfO-8hAZmKV/view?usp=sharing)|
 | FRCN-FPN-BFJ             | 88.8/70.0 | 43.4/53.2 | 52.5 | [GoogleDrive](https://drive.google.com/file/d/1E8MQf3pfOyjbVvxZeBLdYBFUiJA6bdgr/view?usp=sharing) |
 
-# Contact
+## Contact
 
-If you have any questions, feel free to contact Jiangfan Deng (jfdeng@aibee.com).
+If you have any questions, feel free to contact Jiangfan Deng (jfdeng100@foxmail.com).

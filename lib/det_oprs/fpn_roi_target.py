@@ -123,8 +123,8 @@ def fpn_roi_target_bfj(rpn_rois, im_info, gt_boxes, top_k=1):
         ious = max_overlaps * fg_mask.flatten()
         ious = ious.reshape(-1, top_k)[keep_mask]
         # centers
-        ctr_x = all_rois[gt_assignment, 0] + 0.5 * (all_rois[gt_assignment, 2] - all_rois[gt_assignment, 0] + 1)
-        ctr_y = all_rois[gt_assignment, 1] + 0.5 * (all_rois[gt_assignment, 3] - all_rois[gt_assignment, 1] + 1)
+        ctr_x = all_rois[gt_assignment, 1] + 0.5 * (all_rois[gt_assignment, 3] - all_rois[gt_assignment, 1] + 1)
+        ctr_y = all_rois[gt_assignment, 2] + 0.5 * (all_rois[gt_assignment, 4] - all_rois[gt_assignment, 2] + 1)
         gt_height = gt_boxes_perimg[gt_assignment, 3] - gt_boxes_perimg[gt_assignment, 1] + 1
         centers = torch.cat([ctr_x[:, None], ctr_y[:, None], gt_height[:, None]], dim=1)
         centers = centers.reshape(-1, 3, top_k)[keep_mask]
